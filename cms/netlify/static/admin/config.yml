@@ -7,6 +7,18 @@ public_folder: "uploads" # The src attribute for uploaded media will begin with 
 site_url: https://awake-template.netlify.com
 logo_url: https://awake-template.netlify.com/logo-frames/logo-f0.svg
 collections:
+  - name: "recipes" # Used in routes, e.g., /admin/collections/blog
+    label: "Recipes" # Used in the UI
+    preview_path: "{{slug}}"
+    folder: "content/recipes" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "featureImage", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}       
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Posts" # Used in the UI
     preview_path: "{{slug}}"
@@ -30,33 +42,3 @@ collections:
     fields:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Description", name: "description", widget: "markdown"}
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "Page 1"
-        name: "page-1"
-        file: "content/pages/page-1.md"
-        fields:
-          - {label: Title, name: title, widget: string, required: true}
-          - {label: Description, name: description, widget: text, required: true}
-          - {label: Content, name: body, widget: markdown}
-      - label: "Page 2"
-        name: "page-2"
-        file: "content/pages/page-2.md"
-        fields:
-          - {label: Title, name: title, widget: string, required: true}
-          - {label: Description, name: description, widget: text, required: true}
-          - {label: Content, name: body, widget: markdown}
-  - name: "recipes" # Used in routes, e.g., /admin/collections/blog
-    label: "Recipes" # Used in the UI
-    preview_path: "{{slug}}"
-    folder: "content/recipes" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "subtitle", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "featureImage", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}       
