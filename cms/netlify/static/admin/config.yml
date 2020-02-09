@@ -31,3 +31,20 @@ collections:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Description", name: "description", widget: "markdown"}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Page 1"
+        name: "page-1"
+        file: "content/pages/page-1.md"
+        fields:
+          - {label: Title, name: title, widget: string, required: true}
+          - {label: Description, name: description, widget: text, required: true}
+          - {label: Content, name: body, widget: markdown}
+      - label: "Page 2"
+        name: "page-2"
+        file: "content/pages/page-2.md"
+        fields:
+          - {label: Title, name: title, widget: string, required: true}
+          - {label: Description, name: description, widget: text, required: true}
+          - {label: Content, name: body, widget: markdown}
