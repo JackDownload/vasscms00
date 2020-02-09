@@ -24,6 +24,8 @@ if (process.env.NODE_ENV === 'production') {
           './pages/**/*.vue',
           './layouts/**/*.vue',
           './components/**/*.vue'
+          './recipes/**/*.vue'
+          
         ],
         css: css,
         whitelist: [
