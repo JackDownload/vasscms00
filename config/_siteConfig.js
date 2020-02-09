@@ -10,7 +10,7 @@ import theCMS from '../cms/netlify/cms'
  */
 export default {
   siteName: 'Awake'
-  tagline: 'A Nuxt.js Theme for Netlify CMS',
+  tagline: 'VASSSS',
   featureImage: '/uploads/home-hero.jpg',
   logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
   googleAnalytics: {
@@ -29,6 +29,10 @@ export default {
     {
       name: 'Categories',
       link: '/categories'
+    },
+        {
+      name: 'Recipes,
+      link: '/recipes'
     },
     {
       name: 'Github Repo',
