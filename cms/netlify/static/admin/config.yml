@@ -48,7 +48,7 @@ collections:
           - {label: Title, name: title, widget: string, required: true}
           - {label: Description, name: description, widget: text, required: true}
           - {label: Content, name: body, widget: markdown}
-    - name: "receptek" # Used in routes, e.g., /admin/collections/blog
+  - name: "receptek" # Used in routes, e.g., /admin/collections/blog
     label: "receptek" # Used in the UI
     preview_path: "{{slug}}"
     folder: "content/receptek" # The path to the folder where the documents are stored
@@ -57,8 +57,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string"}
-      - {label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: "name", valueField: "name", multiple: true}
-      - {label: "Author", name: "author", widget: "string", default: "Daniel Kelly"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "featureImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}       
